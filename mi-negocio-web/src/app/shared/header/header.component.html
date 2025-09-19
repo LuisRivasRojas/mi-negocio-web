@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a routerLink="/" (click)="closeMenu()">
+          <span class="logo-icon">🏢</span>
+          <span class="logo-text">Mi Negocio</span>
+        </a>
+      </div>
+      
+      <nav class="nav" [class.nav-open]="isMenuOpen">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+              Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/nosotros" routerLinkActive="active" (click)="closeMenu()">
+              Nosotros
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/productos" routerLinkActive="active" (click)="closeMenu()">
+              Productos
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" (click)="toggleMenu()" [class.menu-open]="isMenuOpen" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
