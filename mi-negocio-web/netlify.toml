@@ -1,14 +1,10 @@
 [build]
+  base = "."
   publish = "dist/mi-negocio-web/browser"
   command = "npm run build -- --configuration production"
 
 [build.environment]
   NODE_VERSION = "18"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
 [[headers]]
   for = "/*"
